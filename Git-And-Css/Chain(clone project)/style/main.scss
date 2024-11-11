@@ -1,0 +1,83 @@
+*{
+  padding: 0;
+  margin: 0;
+  // text-shadow: 0 0.5px 0 black;
+}
+
+body {
+  min-height: 100vh;
+  background-image:
+    url("../img/slider-left-dec.png");
+  background-repeat: no-repeat;
+  // background-position: center;
+  // background-attachment: fixed;
+  // background-size: cover;
+  font-family: Arial, Helvetica, sans-serif;
+} 
+
+li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.fontBolder{
+  font-weight: 600;
+}
+
+//////////////////////////////////////////////////
+header{
+  width: 100%;
+}
+.navBar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 20px;
+
+  .flexNavCon{
+    display: flex;
+    justify-content: space-between;
+    min-width: 75%;
+    padding: 5px;
+    font-size: 14px;
+    
+    .ulFlex{
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+  
+      li{
+        padding: 0 15px;
+      }
+      
+      a:hover{
+        color: rgb(75, 142, 241);
+      }
+
+      .singInBtn{
+        margin: 0 0 0 15px;
+        background: rgb(60,73,159);
+        background: linear-gradient(90deg, rgba(60,73,159,1) 0%, rgba(43,218,2521) 100%);
+        border-radius: 25px;
+        padding: 10px;
+
+        a{
+          color: rgb(245, 251, 255);
+        }
+
+        .btnNavImg{
+          width: 15px;
+          height: 15px;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+.fakeBorder{
+  border: 0.5px rgb(212, 212, 212) solid;
+}
