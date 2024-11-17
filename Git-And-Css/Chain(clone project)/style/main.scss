@@ -6,9 +6,6 @@
 
 body {
   min-height: 100vh;
-  background-image:
-    url("../img/slider-left-dec.png");
-  background-repeat: no-repeat;
   // background-position: center;
   // background-attachment: fixed;
   // background-size: cover;
@@ -28,6 +25,24 @@ a{
 }
 
 //////////////////////////////////////////////////
+
+.backImg{
+  background-image:
+  url("../img/slider-left-dec.png");
+  background-repeat: no-repeat;
+  height: 200vh;
+  // position: absolute;
+  // width: 65%;
+}
+#backImg{
+  opacity: 0;
+  animation: fadeIn 2.5s forwards;
+}
+@keyframes fadeIn {
+  to{opacity: 1;}
+}
+
+
 header{
   width: 100%;
 }
@@ -35,7 +50,9 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 25px 20px;
+  padding: 25px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  position: sticky;
 
   .flexNavCon{
     display: flex;

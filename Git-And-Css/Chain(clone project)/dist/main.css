@@ -5,8 +5,6 @@
 
 body {
   min-height: 100vh;
-  background-image: url("../img/slider-left-dec.png");
-  background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -22,6 +20,29 @@ a {
   font-weight: 600;
 }
 
+.backImg {
+  background-image: url("../img/slider-left-dec.png");
+  background-repeat: no-repeat;
+  height: 200vh;
+}
+
+#backImg {
+  opacity: 0;
+  -webkit-animation: fadeIn 2.5s forwards;
+          animation: fadeIn 2.5s forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 header {
   width: 100%;
 }
@@ -36,7 +57,9 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 25px 20px;
+  padding: 25px 20px;
+  background-color: rgba(255, 255, 255, 0);
+  position: sticky;
 }
 .navBar .flexNavCon {
   display: -webkit-box;
