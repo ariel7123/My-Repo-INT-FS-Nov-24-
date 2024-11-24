@@ -1,0 +1,67 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: system-ui;
+}
+
+#circle {
+  background: #ff9999;
+  height: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin: 3rem;
+}
+
+* {
+  margin: 0.5rem;
+}
+
+#box {
+  font-size: 2rem;
+  background: #99ffff;
+  border: 2px solid black;
+  width: fit-content;
+  padding: 1em;
+  margin: 1em 0 0 0;
+}
+
+#cube {
+  background: #99ffff;
+  border: 2px solid black;
+  width: 200px;
+  aspect-ratio: 1;
+  padding: 20px;
+  margin: 23px;
+}
+
+#myBtn {
+  background-color: #d1691f;
+  width: fit-content;
+}
+#myBtn .click-me {
+  background-color: cornflowerblue;
+  width: fit-content;
+  font-size: 2rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 3px solid seashell;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: seashell;
+  font-weight: bold;
+}
+#myBtn .click-me:hover {
+  background-color: royalblue;
+}
+#myBtn .click-me:active {
+  background-color: seashell;
+  color: cornflowerblue;
+  border: 3px solid cornflowerblue;
+}
