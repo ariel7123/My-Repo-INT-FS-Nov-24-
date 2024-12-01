@@ -1,0 +1,50 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border- box;
+          box-sizing: border- box;
+}
+
+* {
+  margin: 0;
+}
+
+main {
+  width: 60ch;
+  margin: auto;
+}
+
+body {
+  line-height: 1.5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+.inline-article {
+  display: inline;
+  border: 1px solid black;
+}
+
+.breadcrumbs li {
+  display: inline;
+}
+.breadcrumbs li a {
+  padding-right: 1rem;
+}
+.breadcrumbs li:last-child {
+  font-weight: 600;
+  padding-inline: 1rem;
+}
+.breadcrumbs li:not(:last-child)::after {
+  content: "/";
+}
+
+.box {
+  display: inline-block;
+  background-color: red;
+  width: 50px;
+  aspect-ratio: 1;
+  margin-inline: 25px;
+  border: 1px solid black;
+}
