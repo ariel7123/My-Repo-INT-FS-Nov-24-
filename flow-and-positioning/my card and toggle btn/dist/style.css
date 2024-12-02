@@ -12,18 +12,74 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.2;
+  background-color: #adadad;
 }
 
 img {
   display: block;
   width: 100%;
+  max-width: 100%;
 }
 
 main {
   width: 90ch;
   margin-inline: auto;
+  padding-inline: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main aside {
+  margin-left: 2rem;
+}
+main aside .toggle-cont {
+  position: relative;
+  width: 3.75rem;
+  height: 1.875rem;
+}
+main aside .toggle-cont .toggle-input {
+  display: none;
+}
+main aside .toggle-cont .toggle-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #dcdcdc;
+  border-radius: 1.875rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+main aside .toggle-cont .toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 1.625rem;
+  height: 1.625rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+main aside .toggle-cont .toggle-input:checked + .toggle-label {
+  background-color: #1c87f4;
+}
+main aside .toggle-cont .toggle-input:checked + .toggle-label::after {
+  -webkit-transform: translateX(1.875rem);
+          transform: translateX(1.875rem);
 }
 main article {
+  overflow-wrap: break-word;
   border-radius: 0.4rem;
   margin: 0 3rem;
   margin-top: 1rem;
@@ -34,6 +90,7 @@ main article {
   transition: box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
   cursor: pointer;
+  background-color: azure;
 }
 main article:hover {
   -webkit-box-shadow: 0 16px 22px rgba(0, 0, 0, 0.15);
@@ -53,7 +110,7 @@ main article figure a {
   color: #fff;
 }
 main article h2 {
-  padding: 0 0.5rem;
+  padding: 0 0.4rem;
   margin-bottom: 20px;
 }
 main article p {
