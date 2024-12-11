@@ -1,0 +1,62 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul, ol, menu {
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: calc(1.2rem + 0.1vw);
+  line-height: 1.5;
+}
+
+body {
+  font-family: system-ui;
+}
+
+button {
+  appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+
+///////////////////////////////////
+/// 
+/// 
+
+.container{
+  width: 1500px;  
+  height: 90%;
+  border: 2px solid black;
+
+
+  .nav{
+    display: flex;
+    justify-content: center;
+    // align-content: space-around;
+    margin-top: 4rem;
+
+    textarea{
+      min-width: 500px;
+
+    }
+  }
+} 
+
+
+

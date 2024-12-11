@@ -1,0 +1,61 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul, ol, menu {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+html {
+  font-size: 1.2rem;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.5;
+  color: hsl(0, 0%, 5%);
+}
+
+.grid {
+  display: grid;
+  grid-template: repeat(12, 1fr)/repeat(11, 1fr);
+}
+.grid .head {
+  grid-area: 1/1/6/13;
+  background-color: black;
+}
+.grid .img-profile {
+  grid-area: 6/1/13/6;
+  background-color: blue;
+}
+.grid .benefits {
+  grid-area: 6/6/9/9;
+  background-color: chocolate;
+}
+.grid .tech-details {
+  grid-area: 6/9/9/12;
+  background-color: cadetblue;
+}
+.grid .pulse {
+  grid-area: 9/6/13/9;
+  background-color: palegreen;
+}
+.grid .join-us {
+  grid-area: 9/9/13/12;
+  background-color: brown;
+}
