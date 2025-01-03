@@ -1,0 +1,149 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul, ol, menu {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+html, body, main {
+  height: 100%;
+}
+
+html {
+  font-size: 1.2rem;
+}
+
+body {
+  font-family: system-ui;
+  line-height: 1.5;
+  color: hsl(0, 0%, 5%);
+}
+
+.grid-12 {
+  display: grid;
+  grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+}
+
+#product {
+  grid-area: 3/3/11/11;
+  gap: 6px;
+  background: lime;
+}
+#product > * {
+  border: 2px solid red;
+}
+#product .pic {
+  grid-area: 1/1/10/8;
+}
+#product .gallery {
+  grid-area: 10/1/13/8;
+}
+#product .extra-data {
+  grid-column-end: span 5;
+  grid-row-end: span 2;
+}
+#product .shipping {
+  grid-area: 7/8/-1/-1;
+}min-width: 350px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+}
+.card img:first-child {
+  border-radius: 16px;
+}
+.card__title, .card__price {
+  font-weight: 500;
+}flex: 1;
+}
+.site-nav__break {
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+main {
+  -webkit-box-flex: 9999999;
+      -ms-flex: 9999999;
+          flex: 9999999;
+  min-width: 900px;
+  overflow: auto;
+}
+main > * + * {
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-margin-before: 2rem;
+          margin-block-start: 2rem;
+}
+.gallery > * {
+  -webkit-box-flex: 500px;
+      -ms-flex: 500px;
+          flex: 500px;
+  min-width: 350px;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+}
+.card img:first-child {
+  border-radius: 16px;
+}
+.card__title, .card__price {
+  font-weight: 500;
+}
+
+.reading-view {
+  width: min(70ch, 100% - 2rem);
+  margin-inline: auto;
+}
+.reading-view > p + p {
+  -webkit-margin-before: 1rem;
+          margin-block-start: 1rem;
+}
+
+aside {
+  margin-block: 1rem;
+  border: 1px solid currentColor;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}

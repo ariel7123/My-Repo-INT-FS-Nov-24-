@@ -1,0 +1,130 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+ul, ol, menu {
+  padding: 0;
+  list-style: none;
+}
+
+html {
+  font-size: calc(1.2rem + 0.1vw);
+  line-height: 1.5;
+}
+
+body {
+  font-family: system-ui;
+}
+
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 1500px;
+  height: 90%;
+  border: 2px solid black;
+}
+.container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4rem;
+}
+.container .nav textarea {
+  min-width: 500px;
+}.875rem;
+}
+main aside .toggle-cont .toggle-input {
+  display: none;
+}
+main aside .toggle-cont .toggle-label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #dcdcdc;
+  border-radius: 1.875rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+main aside .toggle-cont .toggle-label::after {
+  content: "";
+  position: absolute;
+  width: 1.625rem;
+  height: 1.625rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+main aside .toggle-cont .toggle-input:checked + .toggle-label {
+  background-color: #1c87f4;
+}
+main aside .toggle-cont .toggle-input:checked + .toggle-label::after {
+  -webkit-transform: translateX(1.875rem);
+          transform: translateX(1.875rem);
+}
+main article {
+  overflow-wrap: break-word;
+  border-radius: 0.4rem;
+  margin: 0 3rem;
+  margin-top: 1rem;
+  -webkit-box-shadow: 0 14px 16px rgba(0, 0, 0, 0.295);
+          box-shadow: 0 14px 16px rgba(0, 0, 0, 0.295);
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: azure;
+}
+main article:hover {
+  -webkit-box-shadow: 0 16px 22px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 16px 22px rgba(0, 0, 0, 0.15);
+}
+main article figure img {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+main article figure figcaption {
+  color: #fff;
+  position: relative;
+  top: -2rem;
+  left: 0.5rem;
+  font-weight: 600;
+}
+main article figure a {
+  color: #fff;
+}
+main article h2 {
+  padding: 0 0.4rem;
+  margin-bottom: 20px;
+}
+main article p {
+  font-size: 1.1rem;
+  padding: 0 0.5rem 1.5rem;
+}

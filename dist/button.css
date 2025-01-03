@@ -1,0 +1,33 @@
+.button {
+  padding: 1em 2em;
+  text-transform: uppercase;
+  border-radius: 3.6em;
+  border: 2px solid white;
+  background: hotpink;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: scale 300ms;
+  transition: scale 300ms;
+  will-change: scale;
+}
+.button:hover {
+  background: hsl(325, 99%, 72%);
+  scale: 1.1;
+  -webkit-transition: scale 125ms;
+  transition: scale 125ms;
+}
+.button:active {
+  background: hsl(335, 100%, 70%);
+}
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    -webkit-transition: none;
+    transition: none;
+  }
+  .button:hover {
+    -webkit-transition: none;
+    transition: none;
+    scale: 1;
+  }
+}

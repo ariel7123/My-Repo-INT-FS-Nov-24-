@@ -1,0 +1,53 @@
+@charset "UTF-8";
+.toggle {
+  --ball-size: 30px;
+  --slot-padding: 2px;
+  --slot-height: calc(var(--ball-size) + 2 * var(--slot-padding));
+  --slot-width: calc(var(--ball-size) * 2 + var(--slot-padding) * 4);
+  /* צבעים מותאמים אישית */
+  --slot-color-default: #ccc; /* צבע מסלול במצב כבוי */
+  --slot-color-active: #4caf50; /* צבע מסלול במצב דלוק */
+  --ball-color: #fff; /* צבע הכדור */
+  --ball-shadow-color: rgba(0, 0, 0, 0.2); /* צל לכדור */
+  cursor: pointer;
+  display: inline-block;
+}
+
+.toggle input {
+  display: none;
+}
+
+.toggle .slot {
+  width: var(--slot-width);
+  height: var(--slot-height);
+  background: var(--slot-color-default); /* צבע המסלול במצב כבוי */
+  border-radius: var(--slot-height);
+  position: relative;
+  -webkit-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+}
+
+.toggle .ball {
+  width: var(--ball-size);
+  height: var(--ball-size);
+  background: var(--ball-color); /* צבע הכדור */
+  border-radius: 50%;
+  position: absolute;
+  top: var(--slot-padding);
+  left: var(--slot-padding);
+  -webkit-box-shadow: 0 4px 6px var(--ball-shadow-color);
+          box-shadow: 0 4px 6px var(--ball-shadow-color); /* צל לכדור */
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.toggle input:checked + .slot {
+  background: var(--slot-color-active); /* צבע המסלול במצב דלוק */
+}
+
+.toggle input:checked + .slot .ball {
+  -webkit-transform: translateX(calc(var(--slot-width) - var(--ball-size) - 2 * var(--slot-padding)));
+          transform: translateX(calc(var(--slot-width) - var(--ball-size) - 2 * var(--slot-padding)));
+}
