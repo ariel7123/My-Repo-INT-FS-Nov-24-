@@ -7,13 +7,14 @@ if (userFoodInput) {
 else
     alert("No input provided.");
 //////////////////////////////////////////////////////////////
-// #2
+// #2 + #3
 alert("Let's calculate some numbers! Addition, devide and Right angle triangle calculation :)");
 var numInput1 = Number(prompt("Enter any number :)"));
 var numInput2 = Number(prompt("another one pls! ;)"));
 var sumOfAmount = numInput1 + numInput2;
 var sumOfDevide = numInput1 / numInput2;
 var calcHypotenous = Math.sqrt(Math.pow(numInput1, 2) + Math.pow(numInput2, 2));
+///////////////////////////////
 if (sumOfAmount) {
     alert("And summry it equiles to... -" + sumOfAmount + "-");
 }
@@ -29,15 +30,14 @@ if (calcHypotenous) {
 }
 else
     alert("Ughhh you try to piss me out...");
-/*
-// #1
-const userFoodInput = prompt("What's your favorite food?");
-
-alert("wow! " + userFoodInput + "is my favorit to!");
-
-// #2
-const numInput1 = Number(prompt("Enter first number"));
-const numInput2 = Number(prompt("Enter second number!"));
-
-alert(numInput1 + numInput2)
-*/ 
+//////////////////////////////////////////////////////////////
+// #4
+alert("Let's calculate another edge by know the hypotenous and one more edge...");
+var numHypotenous = Number(prompt("What's your hypotenous number?"));
+var numEdge = Number(prompt("What's your another edge?"));
+var calcEdge = Math.sqrt(Math.pow(numHypotenous, 2) - Math.pow(numEdge, 2));
+if (calcEdge) {
+    alert("Your hypotenous is " + numHypotenous + " and edge is " + numEdge + " and the other is " + calcEdge + "!");
+}
+else
+    alert("Ughhh you try to piss me out...");
